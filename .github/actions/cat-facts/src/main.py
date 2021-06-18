@@ -26,8 +26,8 @@ r_obj_list = r.json()
 
 #Print the individual randomly returned cat-fact
 #print(random_fact)
-print(r_obj_list.joke)
+print(r_obj_list)
 
 #Set the fact-output of the action as the value of random_fact
 #print(f"::set-output name=fact::{random_fact}")
-print(f"::set-output name=fact::{r_obj_list.joke}")
+print(f"::set-output name=fact::{r_obj_list}")
