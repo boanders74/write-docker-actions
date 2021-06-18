@@ -7,7 +7,7 @@ import sys
 headers_dict = {"Accept": "application/json"}
 cat_url = "https://icanhazdadjoke.com"
 r = requests.get(cat_url, headers_dict)
-#r_obj_list = r.json()
+r_obj_list = r.json()
 
 #Create an empty list to store individual facts in 
 #This will make it easy to select a random one later
@@ -26,8 +26,8 @@ r = requests.get(cat_url, headers_dict)
 
 #Print the individual randomly returned cat-fact
 #print(random_fact)
-print(r.joke)
+print(r_obj_list.joke)
 
 #Set the fact-output of the action as the value of random_fact
 #print(f"::set-output name=fact::{random_fact}")
-print(f"::set-output name=fact::{r.joke}")
+print(f"::set-output name=fact::{r_obj_list.joke}")
